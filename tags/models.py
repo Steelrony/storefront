@@ -16,6 +16,7 @@ class TaggedItem(models.Model):
     # Two things you need for a generic relationship (this one is for product)
     # Type (product, video, article)
     # ID
+    # Objet itself (if you want it)
     content_type = models.ForeignKey(ContentType, on_delete=models.CASCADE)
     object_id = (
         models.PositiveIntegerField()
