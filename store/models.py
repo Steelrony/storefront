@@ -77,6 +77,7 @@ class OrderItem(models.Model):
 class Address(models.Model):
     street = models.CharField(max_length=255)
     city = models.CharField(max_length=255)
+    zip = models.CharField(max_length=5)
     # customer = models.OneToOneField(Customer, on_delete=models.CASCADE, primary_key=True)  #one to one relationship
     customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
 
